@@ -108,6 +108,7 @@ print(cont)
 '''
 senha = int(input("Digite a senha:"))
 while senha != 4531:
+    print("senha incorreta")
     senha = int(input("Digite a senha:"))
 print("chega")
 '''
@@ -146,3 +147,36 @@ print(negativo, positivo, zero)
 '''
 Um programa que apresente um menu de opçoes para o calculo das seguintes operações entre dois numeros: adição, subtração, multiplicação e divisão. O programa deve possibilitar ao usuario a escolha da operação desejada, a exibição do resultado e a volta do menu de opções. O programa só termina quando for escolhida a opcao de saída
 '''
+'''
+operacao = input("escolha uma das operacoes: adicao, subtracao, divisao ou multiplicacao:")
+num1 = int(input())
+num2 = int(input())
+while operacao != "saida":
+    if operacao == "adicao":
+        print(num1 + num2)
+        input("escolha uma das operacoes: adicao, subtracao, divisao ou multiplicacao:")
+        num1 = int(input())
+        num2 = int(input())
+    if operacao == "subtracao":
+        print(num1 - num2)
+        input("escolha uma das operacoes: adicao, subtracao, divisao ou multiplicacao:")
+    if operacao == "divisao":
+        print(num1 / num2)
+        input("escolha uma das operacoes: adicao, subtracao, divisao ou multiplicacao:")
+    if operacao == "multiplicacao":
+        print(num1 * num2)
+        input("escolha uma das operacoes: adicao, subtracao, divisao ou multiplicacao:")
+print("chega")
+'''
+total = 0
+quero_comprar = True
+
+while quero_comprar:
+    preco = float(input('Preco: '))
+    total += preco
+    opcao = input('Continuar comprando?')
+    if opcao != 's':
+        quero_comprar = False
+print(f'Total da compra: R${total:.2f}')
+
+
