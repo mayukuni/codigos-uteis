@@ -179,4 +179,60 @@ while quero_comprar:
         quero_comprar = False
 print(f'Total da compra: R${total:.2f}')
 
+# def primo(n):
+#     qtd_divisores = 0
+#     divisor = 1
+#     while divisor <= n:
+#         if n % divisor == 0:
+#             qtd_divisores += 1
+#         divisor += 1
+#     if qtd_divisores == 2:
+#         return True
+#     else:
+#         return False
+
+'''credito = float(input('Seu crédito: R$ '))
+while credito > 0:
+    item = float(input('Preço do item: R$ '))
+    if item > credito:
+        print('Compra negada! Ultrapassa seu crédito.')
+        break
+    credito -= item
+print(f'Crédito restante: R$ {credito:.2f}')
+'''
+# escreva um trecho de um programa que le e valida se nota digitada de um aluno eta entre 0 e 10
+'''nota = int(input())
+if nota >= 0 and nota <= 10:
+    print('nota válida')
+else:
+    print('inválida')
+'''
+# faça um programa que imprima as tauadas de ultiplicação de 1 a 10
+# num = 1
+# vezes = 1
+# while num <= 10:
+#     while vezes <= 10:
+#         print(num, "x", vezes, "=", num * vezes)
+#         vezes += 1
+#     num += 1
+#     print("tabuada do", num)
+#     if vezes == 11:
+#         vezes = vezes - 10
+
+
+# um professor possui n turmas e cada turma possui m alunos. Solicite qu o usuario informe a quantidade de turms e a quantidade de alunos de cada turma.
+turmas = int(input("digite o numero de turmas:"))
+num = 0
+# alunos = int(input())
+# construa um programa que leia a nota dos alunos de cada uma das turmas e exiba a media das notas por turma
+while turmas != num:
+    alunos = int(input('digite o numero de alunos:'))
+    print("quantidade de alunos da turma", num + 1, ':', alunos)
+    num2 = 0
+    while alunos != num2:
+        notas = int(input("nota dos alunos:"))
+        num2 += 1
+    print(notas)
+    num += 1
+
 
