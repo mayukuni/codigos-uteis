@@ -91,3 +91,20 @@
 #     print("Handebol")
 # else: 
 #     print("Não pode participar de nenhuma modalidade")
+
+def main(num):
+    v1 = num[0]
+    v2 = num[0]
+    for i in range(1, len(num)):
+        if num[i] < v1:
+            v1 = num[i]
+        elif num[i] > v2:
+            v2 = num[i]
+    return v1, v2
+
+# Vetor com números de 1 a 100
+num = list(range(1, 101))
+v1, v2 = main(num)
+print("v1 =", v1)
+print("v2 =", v2)
+

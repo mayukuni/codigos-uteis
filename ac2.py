@@ -36,4 +36,3 @@ if dia == entrega:
     print('chega hoje!')
 else:
     print('sera entregue ' + entrega)
-
