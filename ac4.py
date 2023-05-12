@@ -41,8 +41,37 @@
 #     print("----------")
 
 # # 1168
-num1 = int(input())
-num2 = int(input())
+# num1 = int(input())
+# num2 = int(input())
+# cont = 0
+# primo = 0
+# while num1 <= num2:
+#     for i in range(1, num1 + 1):
+#         if num1 % i == 0:
+#             primo = primo + 1
+#     if primo == 2:
+#         cont = cont + 1
+#         print(num1)
+#     num1 = num1 + 1
+#     primo = 0
+# print(f'primos: {cont}')
+
+# 1283
+cont = 0
+list = []
+sum = 0
+while True:
+    sec = int(input())
+    if sec < 0:
+        break
+    cont = cont + 1
+    sum = sum + sec
+    list.append(sec)
+media = sum / cont
+print(f'MEDIA: {media:.2f}')
+for i in list:
+    if i < media:
+        print(f'{i:.0f}')
 
 
 
