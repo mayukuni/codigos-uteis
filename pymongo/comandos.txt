@@ -1,0 +1,6 @@
+db.<coleção>.find(query, projection)
+db.teste.find({"Situação":"Situação: CANCELADA"}, {"Título": false})
+
+db.teste.find().sort({"Título": 1})
+
+db.teste.countDocuments()
