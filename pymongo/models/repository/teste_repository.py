@@ -61,7 +61,7 @@ class testeRespository:
         for objeto in objetos:
             response.append(objeto)
         return response
-    
+
     def select_by_object_id(self) -> None:
         collection = self.__db_connection.get_collection(self.__collection_name)
         objetos = collection.find({"_id": ObjectId("66fc07aed23912c13056b50c")})
@@ -69,3 +69,32 @@ class testeRespository:
         for objeto in objetos:
             response.append(objeto)
         return response
+
+    def edit_registry(self, name) -> None:
+        collection = self.__db_connection.get_collection(self.__collection_name)
+        objeto = collection.update_one(
+            {"_id": ObjectId("66fc07aed23912c13056b50c")},
+            {"$set": {"nome": name}}
+        )
+        return objeto.modified_count
+
+    def edit_many_registries(self, filter, propriedades) -> None:  # serve também para adicionar chaves
+        collection = self.__db_connection.get_collection(self.__collection_name)
+        objeto = collection.update_many(
+            filter,
+            {"$set": propriedades}
+        )
+        return objeto.modified_count
+
+    def edit_many_increment(self, num) -> None:
+        collection = self.__db_connection.get_collection(self.__collection_name)
+        objeto = collection.update_many(
+            {"nome": "name"},
+            {"$inc": {"idade": num}}
+        )
+        return objeto.modified_count
+
+    def delete(self, filter) -> None:  # da pra fazer delete_one também
+        collection = self.__db_connection.get_collection(self.__collection_name)
+        objeto = collection.delete_many(filter)
+        return objeto.deleted_count

@@ -12,7 +12,7 @@ teste_repository = testeRespository(db_connection)
 
 exemplo = {
     "nome": "vocee",
-    "idade": "6"
+    "idade": 6
 }
 
 # teste_repository.insert_document(exemplo)
@@ -20,7 +20,7 @@ exemplo = {
 lista_exemplo = [
     {"nome": "vocee"},
     {"nome": "tu",
-     "idade": "2"},
+     "idade": 8},
     {"nome": "ele"},
     {"nome": "aaa",
      "cores": {
@@ -49,3 +49,12 @@ print("vaaa", result5)
 
 result6 = teste_repository.select_by_object_id()
 print("ultimo", result6)
+
+result7 = teste_repository.edit_many_registries({"nome": "tu"}, {"nome": "name"})
+print("fokfkf", result7)
+
+result8 = teste_repository.edit_many_increment(3)
+print("kkfjskjff", result8)
+
+result9 = teste_repository.delete({"nome": "deless"})
+print(result9)
